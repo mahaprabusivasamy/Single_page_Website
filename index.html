@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" 
+    integrity="sha512-6f7HT84a/AplPkpSRSKWqbseRTG4aRrhadjZezYQ0oVk/B+nm/US5KzQkyyOyh0Mn9cyDdChRdS9qaxJRHayww==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet"/>
+    <title>Single Page Website</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        /* CSS for styling the page */
+        /* #00a651 */
+        /* #202020 */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #202020;
+            color: rgb(255, 255, 255);
+        }
+        header {
+            background-color: #202020;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            height: 14vh;
+            
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #202020;
+            padding: 10px;
+         
+            padding-bottom: 2%;
+        }
+        nav a {
+            color: #00a651;
+          
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer;
+            padding: 8px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #202020;
+            border-radius: 10px;
+            font-size: 15px;
+            border: 1px solid white;
+           
+            
+        }
+        nav a:hover{
+            color: #fff;
+            background-color: #00a651;
+        }
+        section {
+            padding: 40px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        section p,li{
+            padding-left: 10%;
+            padding-right: 10%;
+            text-align: justify;
+            
+        }
+        
+        section h2,q{
+            text-align: center;
+            animation: moveText 5s;
+        }
+        .slider {
+            display: flex;
+            overflow: hidden;
+        }
+        .slider img {
+            width: fit-content;
+            height:50vh;
+            background-size: contain;
+            transition: transform 2s ease-in-out;
+        }
+
+        .container{
+          width: 80%;
+          height: 20%;
+         
+
+   display: flex;
+   flex-direction: column;
+      }
+        .img_g{
+            display: flex;
+            flex-direction: row;
+        }
+        .img_g img{
+            width: 60%;
+        }
+/* logo */
+.logo{
+    width: auto;
+    height:auto;
+    
+}
+#logo{
+ 
+    width: 300px;
+}
+#about{
+    background-color: #fff;
+    color: black;
+}
+#about h2{
+    font-weight: 100;
+    animation: moveText 5s;
+}
+#dd{
+    color: #00a651;
+    font-weight: bold;
+   
+
+}
+#in{
+    font-weight: bold;
+}
+
+
+   /* Container styles */
+   .containers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: white;
+        }
+
+        /* Box styles */
+        .box {
+            width: calc(33.33% - 20px); /* 33.33% width with some spacing */
+            margin-bottom: 20px;
+            background-color: #202020;
+            border: 2px solid rgb(15, 15, 14);
+            padding: 20px;
+            border-radius: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #fff;
+            border: top 1px solid rgb(213, 213, 213);
+
+        }
+        .box:hover {
+            
+            background-color: #00a651;
+            color: #202020;
+        }
+      
+        /* Icon styles */
+        .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+            rotate: 3deg;
+         
+            
+        }
+          
+        /* Paragraph styles */
+        .para {
+            font-size: 18px;
+        }
+
+        .para p{
+            color: rgb(255, 251, 251);
+            font-size: 17px;
+        }
+        /* #ps{
+            color: gray;
+        } */
+        .para p:hover{
+            color: #202020;
+        }
+        /* Media query for responsive layout */
+        @media (max-width: 768px) {
+            .box {
+                width: 100%; /* Full width on smaller screens */
+            }
+          
+        }
+        @media (max-width: 800px) {
+            
+ #maha{
+    font-size: 48px;
+ }    
+
+
+   }
+        
+        @media (max-width: 500px) {
+            .icon {
+            font-size: 30px;
+            margin-bottom: 5px;
+            
+        }
+     
+        .bb{
+            rotate: 3deg;
+        }
+
+         .teams{
+            display:flex;
+            flex-direction: column;
+            padding-right: 30px;
+         }
+         section{
+            padding-left: 5%;
+            padding-right: 5%;
+         }
+       nav{
+        margin: 0%;
+        display: inline-block;
+        margin-top: 4%;
+        margin-bottom: 4%;
+       }
+       .mainss{
+        margin-bottom: 30px;
+       }
+     .hhh{
+        font-size: 10px;
+     }
+
+
+ #maha{
+    font-size: 28px;
+ }
+          
+        }
+        /*  */
+        .bb{
+            background-color: #00a651;
+              padding: 4%;
+              
+              width: 10%;
+              margin-left: 40%;
+              border-top-left-radius: 30%;
+              border-bottom-right-radius: 20%;
+              border-bottom-left-radius:10% ;
+              border-top-right-radius: 10%;
+              justify-content: center;
+              
+        }
+
+
+        .mainss{
+           
+            display: flex;
+            flex-direction: column;
+            margin-left: 18%;
+            align-items: center;
+            background-color:#202020;
+           padding:1%;
+            color: #202020;
+            text-align: center;
+            border-radius: 30px;
+            border: 1px solid white;
+          
+        }
+
+        .mainss:hover{
+            background-color: #00a651;
+            color: #202020;
+        }
+        .mainss p{
+            font-size: 18px;
+            color: #fff;
+            margin: 10px;
+        }
+        .mainss img{
+            width: 200px;
+            border-radius: 20px;
+        }
+       .social{
+        text-align: center;
+       }
+       .teams{
+        display: flex;
+       }
+
+       #ss h2{
+     padding: 10px;
+       }
+
+       .im{
+        width: 300px;
+        
+
+       }
+      
+
+       .back img{
+        width: 100%;
+        height: 70vh;
+       
+    
+        /* image-orientation: from-image; */
+        
+       }
+       /* .back
+       {
+        display: inline-block;
+       } */
+       .bac{
+       
+        padding-left: 10px;
+        padding-right: 10px;
+        
+       }
+   
+     .back p{
+        text-align: center;
+     }
+       @keyframes moveText {
+    0% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(1%); /* Adjust the distance to move */
+    }
+}
+@keyframes moveTextLeftToRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Define the left-to-right animation */
+@keyframes leftToRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to specific sections */
+#home,
+#about,
+#gallery,
+#ss,
+#contact {
+    animation: leftToRight 1s ease-in-out; /* Adjust animation duration and timing as needed */
+    opacity: 0; /* Initially hide the text */
+}
+
+/* Define a class for animating text from left to right */
+.animated-text {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+#home,
+#about,
+#gallery,
+#ss,
+#contact {
+    animation: moveTextLeftToRight 1s ease-out forwards; /* Adjust animation duration and timing as needed */
+    opacity: 0; /* Initially hide the text */
+}
+
+/* .qq{
+    margin-left: ;
+}
+q{
+    margin: 4%;
+} */
+
+.hhh{
+    top: 50%;
+    position: absolute;
+    color: white;
+    
+}
+.hhh p{
+    font-size: 68px;
+    padding-left: 10px;
+    font-weight: 800;
+    font-style: oblique;
+    width: 50%;
+    position: relative;
+  
+  
+}
+#sx{
+    color: #202020;
+
+   
+}
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <!-- <h1>Webpage</h1> -->
+        <div class="logo">
+        <img id="logo" src="img/Logo.png"  alt="logo">
+    </div>
+    </header>
+    <nav>
+        <a onclick="scrollAndRefresh('home')">About Us</a>
+        <a onclick="scrollAndRefresh('about')">What We Do</a>
+        <a onclick="scrollAndRefresh('gallery')">Why Choose</a>
+        <a onclick="scrollAndRefresh('ss')">Core Team</a>
+        <a onclick="scrollAndRefresh('contact')">Contact</a>
+    </nav>
+    
+
+   
+    <div  class="back">
+      
+<!-- <p>FOR THE FORMERS <br> BU THE INNOVATORS <br>OF THE COUNTRY</p> -->
+        <img src="img/back.png" alt="b">
+        <div class="hhh">
+
+            <p id="maha">FOR THE <span  id="sx">FORMERS</span> , BY THE <span  id="sx">INNOVATORS</span>  , OF THE <span id="sx">COUNTRY</span> </p></div>
+    </div>
+
+    <!-- <section class="qq">
+       <h4 style="text-align: center;font-style: italic;">
+        “ FOR THW FORMERS,BY THE INNOVATORS,OF THE COUNTRY ”
+       </h4>
+    </section> -->
+    <!-- </header> -->
+    <!-- <div class="slider">
+        <img src="agri.jpg" alt="Image 1" >
+        <img src="maldives.jpg" alt="Image 2">
+        <img src="ss.jpg" alt="Image 3">
+    </div> -->
+    <section id="home">
+       
+      <h2>About <span id="dd">Us</span></h2>
+      <p>At INDAGRIC we are passionate about revolutionizing the agricultural industry with innovative 
+        solutions and environment friendly science to develop the productivity rate of agricultural crops which ensures
+         increased net farm income to the farmers through various products. With a deep-rooted commitment to sustainable farming practices and cutting-edge technology, we aim to address the challenges
+          faced by the agricultural community and pave the way for a more prosperous and food-secure future. </p>
+
+    </section>
+    <section id="about">
+        <h2>Our <span id="dd">Dream</span> <span id="in">Innovation!</span></h2>
+        <!-- <p>We are a creative and innovative team dedicated to building amazing websites.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus neque accusantium officiis nemo dicta quam debitis hic odit? Itaque ab alias corporis perferendis maxime iure temporibus maiores doloremque odio possimus.lo  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima libero quos sapiente facilis corporis laborum dolorem voluptatem fuga tempore, dolorum molestias minus recusandae commodi ducimus perspiciatis numquam, possimus eos explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus minus deserunt hic, unde ad illum voluptatem a quam iure atque aliquid facere molestias. Animi assumenda veritatis deleniti dolorum impedit hic!</p> -->
+  
+    <div class="containers">
+        <div class="box">
+            <div class="icon">
+                
+                <div class="bb">
+                    <ion-icon name="rocket-outline"></ion-icon>                </div>
+            </div>
+            <div class="para">
+                <h3>Mission</h3>
+                <p id="ps">To develop the productivity rate of agricultural crops using environment friendly 
+                    science and technology which ensures increased net 
+                    farm income to the farmers through various products</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon">
+                <div class="bb">
+                    <ion-icon name="telescope-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="para">
+                <h3>Vision</h3>
+                <p id="ps">To make Agriculturee profitable and attractive enterprise with sustainable
+                     and to accelerate the world's agriculture to automation</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon">
+                <div class="bb">
+                    <ion-icon name="sunny-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="para">
+                <h3>Ideation</h3>
+                <p id="ps">Our team aims create a user-friendly,autonomous pesticide spraying adaptable to 
+                    agricultural fields. it prioritizes farmer-friendliness, easy maintanance, and disease management 
+                    for increased crop profits while minimizing human worker pesticide exposure</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="gallery">
+        <h2><span id="dd">Who</span> We Are</h2>
+        <p>	INDAGRIC is a team of dedicated innovators in agriculture,
+             technology and sustainability. We bring together decades of experience and young minds with shared belief in the power
+              of agriculture to transform lives. Our diverse team includes agronomists, engineers, data scientists,
+               and business professionals, all working together 
+            to provide holistic solutions to farmers worldwide.</p>
+        <br><br>
+        <h2>What <span id="dd">We</span> DO</h2>
+    <p>
+        At INDAGRIC, we offer a wide range of agricultural solutions designed to address the unique 
+        challenges faced by farmers. Our services include:
+        <li>Precision Farming: We empower farmers with data-driven insights and precision agriculture tools, helping 
+            them optimize crop yields and reduce resource wastage by using technologies like Internet of Things, Image processing, sensing the land environment, etc at affordable cost by a farmer.</li>    
+   <li >Crop Protection: We provide innovative solutions to protect crops from pests and diseases while minimizing the use of chemicals and increasing the organic pesticides in the field to
+     increase the fertility of the soil.</li> 
+    
+    <li>Sustainable Practices: We promote and support sustainable farming practices that enhance soil health, conserve water,
+         and reduce carbon emissions.</li>
+    <li>Education and Training: We offer educational resources and training programs to empower farmers with knowledge and skills essential for modern agriculture
+         which make our solution easy to manage by them.</li>
+    <li>Market Access: We connect farmers with markets, ensuring fair prices for their produce and fostering
+         economic growth in rural communities.</li>
+    
+        </p>
+        </section>
+
+
+        <section>
+            <h2>Why <span id="dd">Choose</span> Us?</h2>
+            <p><li>Innovation: We are at the forefront of agricultural technology, constantly researching and developing new solutions to meet the evolving needs of farmers.</li>
+                <li>Sustainability: We are deeply committed to environmental sustainability and work towards a greener, more sustainable future for agriculture.</li>
+                <li>Community: We believe in the power of community and collaborate with farmers, organizations, and governments to create a supportive ecosystem for agriculture.</li>
+                <li>Results: Our solutions are backed by data and proven to deliver tangible results, from increased crop yields to improved livelihoods for farmers.</li>
+                </p>
+        </section>
+
+
+        <section>
+            <h2 style="text-align: center;">Join Us In Transfroming <span id="dd">AGRICULTURE</span></h2>
+            <p>We invite you to join us on this exciting journey to transform agriculture for the better. Whether you are a farmer looking to enhance your productivity or a stakeholder in the agricultural industry or an innovator trying to change the world with us, we welcome you to explore our website and discover how INDAGRIC can be your partner in growth and sustainability.
+               <br><br> Thank you for choosing INDAGRIC as your trusted source for agricultural solutions. Together, we can create a brighter, more sustainable future for agriculture.
+                </p>
+        </section>
+    <section id="ss">
+        <h2>Core <span id="dd">Team</span></h2>
+        <br>
+
+
+        <div class="teams">
+               <div class="mainss">
+                
+                       
+                <div class="im">
+                    <img  
+    src="img/p1.jpg" alt=""></div>
+                <br>
+                    <p class="ppp">
+                        S. SURENDRAN <br>LEAD & ELECTRICAL TEAM,INDAGRIC.
+
+                    </p>
+               </div>
+               <div class="mainss">
+                
+                <div class="im">
+                <img  
+src="img/p4.jpg" alt=""></div>
+     
+         <p>
+           	A. THAHA ABDUL HAMEED <br>
+CO-LEAD & PROGRAMMING TEAM,
+INDAGRIC.
+
+
+         </p>
+    </div>
+        
+        
+        
+        </div>
+<br><br>
+        <div class="teams">
+            <div class="mainss">
+             
+                <div class="im">
+                    <img  
+    src="img/p3.jpg" alt=""></div>
+                 <p>
+                    A. SURYARAJU <br>
+MECHANICAL TEAM LEAD,
+INDAGRIC.
+
+
+                 </p>
+            </div>
+            <div class="mainss">
+            
+                <div class="im">
+                    <img  
+    src="img/p2.jpg" alt=""></div>
+  
+      <p>
+       K. R. PRANAV BALAJI <br>
+        PUBLIC RELATIONS TEAM LEAD,
+        INDAGRIC.
+        
+
+      </p>
+ </div>
+     
+     
+     
+     </div>
+    </section>
+    <section id="contact">
+        <h2><span id="dd">Contact</span> Us</h2>
+            <div class="social">
+                <ion-icon name="call-outline" style="padding: 10px,6px,5px,5px;"></ion-icon><i >  +91 9080843718</i> <br>
+                <ion-icon name="logo-instagram" style="padding: 10px,6px,5px,5px;"></ion-icon><i>  INDAGRIC</i><br>
+                <ion-icon name="mail-outline" style="padding: 10px,6px,5px,5px;"></ion-icon><i>  indagric@gmail.com</i><br>
+            </div>
+        <!-- Add contact form or contact information here -->
+    </section>
+
+    <script>
+        // JavaScript for smooth scrolling to sections
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // JavaScript for automatic slider
+       
+
+
+        function reducePageWidth() {
+            document.body.classList.add("scroll-down");
+            sections.forEach(section => {
+                section.querySelector("header").style.height = "10vh"; // Adjust the font size as needed
+            });
+
+
+
+            const sections = document.querySelectorAll('section');
+
+const options = {
+    threshold: 0.5, // Trigger when 50% of the section is visible
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = 1; // Show the section's content
+        }
+    });
+}, options);
+
+sections.forEach((section) => {
+    observer.observe(section);
+});
+        }
+// 
+
+// JavaScript for smooth scrolling to sections
+// document.addEventListener('DOMContentLoaded', function () {
+//     const navLinks = document.querySelectorAll('nav a');
+
+//     navLinks.forEach((link) => {
+//         link.addEventListener('click', function (e) {
+//             e.preventDefault();
+//             const targetId = this.getAttribute('href').substring(1); // Remove the '#' from the href
+//             const targetSection = document.getElementById(targetId);
+            
+//             if (targetSection) {
+//                 targetSection.scrollIntoView({
+//                     behavior: 'smooth',
+//                     block: 'start',
+//                 });
+//             }
+//         });
+//     });
+// });
+
+
+//         }
+ 
+        // JavaScript to handle text animation when clicking on navigation links
+// function scrollToSection(sectionId) {
+//     const sections = document.querySelectorAll('section');
+    
+//     sections.forEach((section) => {
+//         section.classList.remove('active-section');
+//     });
+
+//     const section = document.getElementById(sectionId);
+
+//     if (section) {
+//         section.classList.add('active-section');
+
+//         const animatedText = section.querySelector('.animated-text');
+
+//         if (animatedText) {
+//             animatedText.style.transform = 'translateX(0)';
+//         }
+//     }
+// }
+        // JavaScript to handle scroll-triggered animations
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('section');
+    const windowHeight = window.innerHeight;
+
+    function checkSectionInView() {
+        sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < windowHeight * 0.8 && rect.bottom >= 0) {
+                section.style.opacity = 1;
+            }
+        });
+    }
+
+    // Initial check to show sections that are already in view
+    checkSectionInView();
+
+    // Add a scroll event listener to trigger animations
+    window.addEventListener('scroll', checkSectionInView);
+});
+
+
+function scrollAndRefresh(sectionId) {
+    // JavaScript for smooth scrolling to sections
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Set a timeout to refresh the page after 2 seconds (2000 milliseconds)
+    setTimeout(function () {
+        location.reload(); // Refresh the page
+    }, 200);
+}
+
+
+    </script>
+</body>
+</html>
